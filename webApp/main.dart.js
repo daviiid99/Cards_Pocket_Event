@@ -35639,7 +35639,7 @@ k=A.aN(r,r,r,new A.bn(r,A.e7(B.aG,new A.cL("assets/logo/original_logo.png")),r,r
 i=A.j(a,r,q).w
 j=A.j(a,r,q).w
 q=A.j(a,r,q).w
-return A.aN(r,A.pa(A.a([k,A.aN(r,A.Gw(B.BO,B.ai),r,r,i.a.b*0.15,new A.a0(j.a.a*0.1,0,q.a.a*0.1,0),r,s)],t.p),B.bz,B.aL),r,r,p.a.b*0.4,new A.a0(n.a.a*0.05,o.a.b*0.07,m.a.a*0.05,0),r,s)}}
+return A.aN(r,A.pa(A.a([k,A.aN(r,A.Gw(B.BO,B.ai),r,r,i.a.b*0.15,new A.a0(j.a.a*0.1,0,q.a.a*0.1,0),r,s)],t.p),B.bz,B.aL),r,r,p.a.b*0.45,new A.a0(n.a.a*0.05,o.a.b*0.07,m.a.a*0.05,0),r,s)}}
 A.o4.prototype={}
 A.a54.prototype={
 $1(a){if(a.gic(a).ll$)A.aa(A.a5C("error database_closed",null,null))
