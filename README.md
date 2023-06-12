@@ -9,8 +9,8 @@ Presentación del proyecto CARDS Pocket
 # Descargas
 Visualiza esta presentación
 
-<a href="https://play.google.com/store/apps/details?id=com.daviiid99.uno_pocket"><img src="buttons/android.png" width="400" height="100"></a></br>
-<a href="https://daviiid99.github.io/CARDS_Pocket/webApp"><img src="buttons/chrome.png" width="400" height="100"></a></br>
+<a href="https://play.google.com/store/apps/details?id=com.daviiid99.cards_pocket_event"><img src="buttons/android.png" width="400" height="100"></a></br>
+<a href="https://daviiid99.github.io/Cards_Pocket_Event/webApp"><img src="buttons/chrome.png" width="400" height="100"></a></br>
 
 # Compatibilidad
 - [x] android
