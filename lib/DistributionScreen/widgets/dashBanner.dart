@@ -18,7 +18,7 @@ class DashBanner extends StatelessWidget{
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage("assets/distributionScreen/dash.png"),
-          fit: getHeight(context) > 500 ? BoxFit.fitWidth : BoxFit.fitHeight
+          fit: getHeight(context) > 500 ? BoxFit.fitHeight : BoxFit.fitHeight
         )
       ),
     );
