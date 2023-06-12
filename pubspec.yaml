@@ -81,8 +81,9 @@ flutter:
     - assets/frameworksScreen/android/
     - assets/frameworksScreen/ios/
     - assets/frameworksScreen/chrome/
-
-
+    - assets/designScreen/
+    - assets/distributionScreen/
+    - assets/gameScreen/
 
 flutter_icons:
   image_path: "assets/logo/logo.png"

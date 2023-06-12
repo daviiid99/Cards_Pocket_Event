@@ -1,3 +1,4 @@
+import 'package:cards_pocket_event/GameScreen/widgets/playBanner.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import '../exports.dart';
@@ -12,6 +13,13 @@ class GameScreenView extends StackedView<GameScreenModel>{
       GameScreenModel viewModel,
       Widget? child
       ){
+
+    if(!viewModel.isModelReady){
+      viewModel.currentPageCountDown(context, viewModel.countDown);
+      viewModel.isModelReady = true;
+      viewModel.notifyListeners();
+    }
+
     return Scaffold(
       body: Stack(
         children: [
@@ -20,6 +28,9 @@ class GameScreenView extends StackedView<GameScreenModel>{
 
           // Container Box
           ContainerBox(),
+
+          // PlayBanner
+          PlayBanner(),
 
           // Return Button
           ReturnButton(viewModel: viewModel,),

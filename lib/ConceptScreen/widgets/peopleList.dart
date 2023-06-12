@@ -41,7 +41,7 @@ class PeopleList extends StatelessWidget{
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(viewModel.people[index]),
-                    fit: BoxFit.fitHeight
+                    fit: getWidth(context) > 500 ?  BoxFit.cover : BoxFit.fitHeight
                   ),
                   borderRadius: BorderRadius.circular(30),
                   color: Colors.white,

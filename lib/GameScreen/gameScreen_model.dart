@@ -1,8 +1,57 @@
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:flutter/cupertino.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:quiver/async.dart';
 import 'package:stacked/stacked.dart';
 
 class GameScreenModel extends BaseViewModel implements Initialisable{
+
+  int countDown = 120;
+  bool isModelReady = false;
+  late BuildContext context;
+  Map<String,dynamic> config = {"exit" :  "false"};
+
   @override
   void initialise(){
 
+  }
+
+  currentPageCountDown(BuildContext context, int countDownD) async {
+    // A method to exit from current screen after 60s
+    CountdownTimer timer = CountdownTimer(Duration(seconds: 60), Duration(seconds: 1));
+    var listener = timer.listen(null);
+
+    listener.onData((data) {
+      if (countDown > 0) countDown--;
+      notifyListeners();
+      if (countDown == 0){
+        // Return to previous context
+        manualExit(context);
+        countDown = 60;
+        notifyListeners();
+        listener.pause();
+
+      }
+
+    });
+  }
+
+  manualExit(BuildContext context) async{
+    Directory dir = await getApplicationDocumentsDirectory();
+
+    if (dir.existsSync()){
+      // Create a temp file
+      File tempFile = File("${dir.path}/settings.txt");
+      tempFile.createSync();
+      if (tempFile.existsSync()){
+        // Write a variable to it
+        config["exit"] = true;
+        String temp = jsonEncode(config);
+        tempFile.writeAsStringSync(temp);
+        Navigator.of(context).pop();
+      }
+    }
   }
 }

@@ -36,8 +36,8 @@ class EventAppView extends StackedView<EventAppModel>{
           FooterWidget(),
 
           // Check Device Screen
-          if (getWidth(context) > 500)
-            DeviceNotSupportedScreen(),
+          //if (getWidth(context) > 500)
+          //  DeviceNotSupportedScreen(),
 
         ],
       )

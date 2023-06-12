@@ -33,10 +33,10 @@ class TechnologyBanner extends StatelessWidget{
           Container(
             width: getWidth(context) * 0.25,
             height: getHeight(context) * 0.4,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage("assets/technologiesScreen/google_logo.png"),
-                fit: BoxFit.fitWidth
+                fit: getWidth(context) > 500 ?  BoxFit.fitHeight : BoxFit.fitWidth
               )
             ),
           )

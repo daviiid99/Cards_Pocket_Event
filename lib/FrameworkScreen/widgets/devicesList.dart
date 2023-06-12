@@ -57,7 +57,7 @@ class DevicesList extends StatelessWidget{
                       borderRadius: BorderRadius.circular(30),
                       image: DecorationImage(
                         image: AssetImage(viewModel.devicesImage[index]),
-                        fit: BoxFit.fitHeight
+                        fit: getWidth(context) > 500 ?  BoxFit.cover :  BoxFit.fitHeight
                       )
                     ),
                 ),

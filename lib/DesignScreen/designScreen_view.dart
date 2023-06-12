@@ -12,6 +12,13 @@ class DesignScreenView extends StackedView<DesignScreenModel>{
       DesignScreenModel viewModel,
       Widget? child
       ){
+
+    if (!viewModel.isModelReady){
+      viewModel.currentPageCountDown(context, viewModel.countDown);
+      viewModel.isModelReady = true;
+      viewModel.notifyListeners();
+    }
+
     return Scaffold(
       body: Stack(
         children: [
@@ -20,6 +27,18 @@ class DesignScreenView extends StackedView<DesignScreenModel>{
 
           // Container Box
           ContainerBox(),
+
+          // Banner
+          DesignBanner(),
+
+          // SubBanner
+          DesignSubBanner(),
+
+          // Timer
+          TimerWidget(viewModel: viewModel),
+
+          // Components
+          ComponentsMaterial(),
 
           // Return button
           ReturnButton(viewModel: viewModel,),

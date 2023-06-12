@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import '../resize.dart';
 import '../control.dart';
@@ -28,7 +29,11 @@ class ReturnButton extends StatelessWidget{
           backgroundColor: Colors.blueAccent
         ),
         onPressed: (){
-          viewModel.manualExit(context);
+          if (kIsWeb){
+            Navigator.of(context).pop();
+          } else {
+            viewModel.manualExit(context);
+          }
         },
         child: const Text("Cerrar", style: TextStyle(color: Colors.white, fontSize: 35, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
         ),
