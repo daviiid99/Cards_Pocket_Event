@@ -9,7 +9,7 @@ class SloganWidget extends StatelessWidget{
   Widget build(BuildContext context){
     return Container(
       width: double.maxFinite,
-      height: getHeight(context) * 0.4,
+      height: getHeight(context) * 0.45,
       margin: EdgeInsets.only(
         top: getHeight(context) * 0.07,
         left: getWidth(context) * 0.05,
