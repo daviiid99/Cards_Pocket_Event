@@ -38,7 +38,7 @@ class DesignScreenView extends StackedView<DesignScreenModel>{
           TimerWidget(viewModel: viewModel),
 
           // Components
-          ComponentsMaterial(),
+          ComponentsMaterial(viewModel: viewModel,),
 
           // Return button
           ReturnButton(viewModel: viewModel,),

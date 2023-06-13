@@ -11,6 +11,10 @@ class DesignScreenModel extends BaseViewModel implements Initialisable{
   bool isModelReady = false;
   int countDown = 60;
   Map<String,dynamic> config = {"exit" :  "false"};
+  TextEditingController controller = TextEditingController(text: "");
+  double controllerHeight = 0.16;
+  bool isSoundEnabled = false;
+
 
   @override
   void initialise(){

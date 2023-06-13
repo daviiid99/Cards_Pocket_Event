@@ -76,9 +76,9 @@ class EntriesWidget extends StatelessWidget{
                   // Shortcut Label
                   Container(
                     width: double.maxFinite,
-                  height: height * 0.05,
+                  height: height * 0.06,
                   margin: EdgeInsets.only(
-                    top: height * 0.3
+                    top: height * 0.29
                     ),
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
